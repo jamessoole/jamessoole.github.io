@@ -73,7 +73,7 @@ function hideLeastPlayed() {
 function featureDescription() {
     var choice = document.getElementById("options").value;
     if (choice == 'total') {
-        document.querySelector(`#feature-description`).innerHTML = "A highly-scientific, carefully crafted, intensely precise, and subjectively-weighted aggregate score for the track's overally happiness factor.";
+        document.querySelector(`#feature-description`).innerHTML = "A highly-scientific, carefully crafted, intensely precise, and subjectively-weighted aggregate score for the track's overall happiness factor.";
         document.querySelector(`#feature-description`).style.opacity = 1;
     } else if (choice == "energy") {
         document.querySelector(`#feature-description`).innerHTML = "A perceptual measure of intensity and activity. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.";
