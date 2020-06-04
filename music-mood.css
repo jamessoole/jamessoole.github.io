@@ -79,7 +79,7 @@ body {
     left: -200px;
     /* mix-blend-mode: soft-light; */
     opacity: 20%;
-    /* transition: 0.5s ease-in-out; */
+    transition: 0.5s ease-in-out;
     animation: slide 1000ms ease-in-out;
 }
 @keyframes slide {
@@ -366,5 +366,8 @@ body {
     #audio {
         top: -300%;
         left: 75%;
+    }
+    .listeningside {
+        color: #145a51;
     }
 }
