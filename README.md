@@ -1,11 +1,17 @@
-# music-happiness-index
-Visualize values on the 'Happiness Scale' for my most-played songs based on audio features from Spotify API.
+# Music Happiness Index
 
-Python scripts run.py calls client.py, writing data to track-data.js
-Front end in index.html , music-mood.css, music-mood.js
+### Visualize values on the 'Happiness Scale' for my most-played songs based on audio features pulled from Spotify API.
 
-Features: energy, valence, mode (major/minor key), danceability, tempo, and self-made aggregate total
+Currently hosted [Here](https://jamessoole.github.io).
 
-TODO:
-Responsiveness,
-CSS for varying number of displayed tracks
+Python script `run.py` calls `client.py`, writing data to `track-data.js`
+
+From-scratch front end in `index.html` , `music-mood.css`, `music-mood.js`
+
+Features: 
+- energy
+- valence
+- mode (major/minor key)
+- danceability
+- tempo
+- self-made aggregate total
