@@ -277,7 +277,7 @@ body {
 
 
 /* cover art */
-.art {
+.art, .loading {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -297,6 +297,41 @@ body {
 
 }
 
+.loading {
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .2), transparent);
+}
+
+/* dots displayed when image's loading */
+.loading-text {
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+    z-index: 5;
+    /* opacity: 0; */
+    visibility: hidden;
+    font-size: 60px;
+    color: #229788;
+    transition: 0.1 ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: pulse 3s infinite;
+}
+@keyframes pulse {
+    0% {
+      opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+
+  
 /* play audio button */
 #audio {
     transform: rotate(-90deg);
@@ -371,3 +406,6 @@ body {
         color: #145a51;
     }
 }
+
+
+

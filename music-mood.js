@@ -289,11 +289,18 @@ function art(i) {
         
     } else {
         document.querySelector('.art').src = arturl;
-        document.querySelector('.art').style.opacity = 1;
+        document.querySelector('.art').style.opacity = 0.1;
+        document.querySelector('.loading-text').style.visibility = 'visible';        
+
         document.querySelector('#audio').src = previewurl;
         document.querySelector('#audio').style.transform = "scale(0.8)";
     }
 }
 
 
+// makes image visible only when fully loaded
+document.querySelector('.art').addEventListener('load', () => {
+    document.querySelector('.loading-text').style.visibility = 'hidden';        
+    document.querySelector('.art').style.opacity = 1;
+});
 
