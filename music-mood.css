@@ -336,7 +336,7 @@ body {
 #audio {
     transform: rotate(-90deg);
     position: absolute;
-    top: -85%;
+    top: -60%;
     left: -50px;
     z-index: 2;
 
@@ -394,11 +394,6 @@ body {
         text-align: justify;
     }
     #audio {
-        /* align-items: flex-end; */
-        left: 70%;
-        top: -230%;
-    }
-    #audio {
         top: -300%;
         left: 75%;
     }
@@ -406,6 +401,15 @@ body {
         color: #145a51;
     }
 }
-
+@media screen and (max-width: 800px) and (min-width: 600px) {
+    /* #audio {
+        top: -300%;
+        left: 75%;
+    } */
+    #audio {
+        left: 75%;
+        top: -127%;
+    }
+}
 
 

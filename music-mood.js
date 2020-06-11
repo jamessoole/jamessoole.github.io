@@ -28,7 +28,7 @@ $('html').click(function(e) {
 });
 function hideSubheading() {
     console.log($( window ).width());
-    if ($( window ).width() < 600) {
+    if ($( window ).width() < 800) {
         document.querySelector(`.subheadingtext`).style["line-height"] = "0em";
         document.querySelector(`.subheadingtext`).style.opacity = 0;
     } else {
