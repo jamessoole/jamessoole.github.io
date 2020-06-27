@@ -34,8 +34,28 @@ def run():
     choice = 'tracks'
     
     if choice == 'tracks':
+        # choose term/limit
+        term = input("Choose term 'long' (ever), 'medium' (1/2 year), or 'short' (month) :  ")
+        if (term == 'long'): term = 'long_term'
+        if (term == 'medium'): term = 'medium_term'
+        if (term == 'short'): term = 'short_term'
+        if not (term == 'long_term' or term == 'medium_term' or term == 'short_term'):
+            print("Term not recognized. Default: short_term.")
+            term = 'short_term'
+
+        limit = input("How many items (max 50)?   ")
+        try:
+            if not (int(limit) > 0 and int(limit) < 51):
+                print("Out of range. Default: 5.")
+                limit = 5
+        except:
+            print("Invalid Input. Default: 5.")
+            limit = 5
+        
+
+        # get tracks
         want_analysis = input("Print audio analysis (y,n)?  ")
-        tracks = client.get_top_tracks()
+        tracks = client.get_top_tracks(term, limit)
 
         print()
         print('The following are your top tracks, starting with the most played')
@@ -107,7 +127,10 @@ def run():
         artworks += "]"
         previews += "]"
 
-        f = open('track-data.js', 'w')
+        fname = 'track-data-' + term + '.js'
+        # print(f'filemane: {fname}')
+
+        f = open(fname, 'w')
         f.write(names)
         f.write("\n")
         f.write(artists)

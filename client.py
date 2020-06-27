@@ -11,23 +11,23 @@ class SpotifyClient(object):
     
 
 
-    def get_top_tracks(self):
-        term = input("Choose term 'long' (ever), 'medium' (1/2 year), or 'short' (month) :  ")
-        if (term == 'long'): term = 'long_term'
-        if (term == 'medium'): term = 'medium_term'
-        if (term == 'short'): term = 'short_term'
-        if not (term == 'long_term' or term == 'medium_term' or term == 'short_term'):
-            print("Term not recognized. Default: short_term.")
-            term = 'short_term'
+    def get_top_tracks(self, term, limit):
+        # term = input("Choose term 'long' (ever), 'medium' (1/2 year), or 'short' (month) :  ")
+        # if (term == 'long'): term = 'long_term'
+        # if (term == 'medium'): term = 'medium_term'
+        # if (term == 'short'): term = 'short_term'
+        # if not (term == 'long_term' or term == 'medium_term' or term == 'short_term'):
+        #     print("Term not recognized. Default: short_term.")
+        #     term = 'short_term'
 
-        limit = input("How many items (max 50)?   ")
-        try:
-            if not (int(limit) > 0 and int(limit) < 51):
-                print("Out of range. Default: 5.")
-                limit = 5
-        except:
-            print("Invalid Input. Default: 5.")
-            limit = 5
+        # limit = input("How many items (max 50)?   ")
+        # try:
+        #     if not (int(limit) > 0 and int(limit) < 51):
+        #         print("Out of range. Default: 5.")
+        #         limit = 5
+        # except:
+        #     print("Invalid Input. Default: 5.")
+        #     limit = 5
 
         url = f'https://api.spotify.com/v1/me/top/tracks?time_range={term}&limit={limit}'
 
