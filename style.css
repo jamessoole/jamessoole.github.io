@@ -97,7 +97,6 @@ body {
 
 
 
-
 .hero {
     color: var(--color11);
     /* color: var(--color6); */
@@ -112,6 +111,17 @@ body {
     from {opacity: 0;}
     to {opacity: 100%;}
 }
+.subHeading {
+    font-size: 0.7em;
+    color: var(--color7);
+}
+@media screen and (max-width: 500px) {
+    .subHeading {
+        font-size: 4.5vw;
+    }
+}
+
+
 
 /* CONTAINS ALL BOXES */
 .box-container {
