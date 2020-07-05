@@ -302,6 +302,7 @@ body {
     margin-top: 20px;
     display: flex;
     width: 600px;
+    /* width: 50%; */
     margin: auto;
     animation: appear 0.5s;
     pointer-events: none;
@@ -328,16 +329,30 @@ body {
     margin-left: 5%;
     margin-right: 5%;
     top: 120px;
+    /* top: 15%; */
+    /* top: 15vh; */
     padding-top: 5px;
     padding-bottom: 5px;
    
     text-align: center;
     line-height: 0.6em;
     font-size: 12px;
+    /* font-size: 1vw; */
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
     background-color: #fff;
 }
 .resumeEmailText a {
     color: var(--color10);
+}
+@media screen and (max-width: 600px) {
+    #resume-container {
+        width: 90%;
+    }
+    .resumeEmailText { 
+        /* visibility: hidden; */
+        top: 14.9%;
+        font-size: 2vw;
+
+    }
 }
