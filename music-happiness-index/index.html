@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Happiness Index</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel = "stylesheet" href="music-mood.css">
+</head>
+<body>
+    <div><a href="../index.html" class="home">Home</a></div>
+
+    <div class="listeningside">Listening</div>
+
+    <div class="title">
+        <div class="what">What</div>
+        <div class="ive">I've</div>
+        <div class="been">Been</div>
+        <div class="listening">Listening</div>
+        <div class="to">To</div>
+    </div>
+
+    <div class="subheading">
+        <div class="subheadingtext"></div>
+        <div id="dropdown">
+            <label >Feature</label>
+            <select id="options" onmouseover="featureDescription()" onmouseout="featureDescriptionOff()">
+                <option value="total">Total</option>
+                <option value="energy">Energy</option>
+                <option value="valence">Valence</option>
+                <option value="mode">Mode</option>
+                <option value="danceability">Danceability</option>
+                <option value="tempo">Tempo</option>
+            </select>
+        </div>
+        <div id="feature-description">HEY</div>
+    </div>
+
+    
+
+    <div class="most-played">Most Played</div>
+    <div class="least-played">Least Played</div>
+
+
+    <!-- all 50 bars -->
+    <!-- also contains description,art, and audio -->
+    <div class="data-container">
+
+        <img class="art loading"></figure>
+        <div class="loading-text">. . . </div>
+        <audio id="audio" controls></audio>
+
+        <!-- description text box for artist and song name-->
+        <div id="description">
+            <p class="artist"></p>
+            <p class="name"></p>
+        </div>
+
+
+        <div class="bar bar0" onmouseover="showDescription(0); mostPlayed()" onmouseout="hideDescription(0); hideMostPlayed()" onclick="art(0)"><span class="tooltiptext tooltiptext0"></span></div>
+        <div class="bar bar1" onmouseover="showDescription(1); mostPlayed()" onmouseout="hideDescription(1); hideMostPlayed()" onclick="art(1)"><span class="tooltiptext tooltiptext1"></span></div>
+        <div class="bar bar2" onmouseover="showDescription(2); mostPlayed()" onmouseout="hideDescription(2); hideMostPlayed()" onclick="art(2)"><span class="tooltiptext tooltiptext2"></span></div>
+        <div class="bar bar3" onmouseover="showDescription(3)" onmouseout="hideDescription(3)" onclick="art(3)"><span class="tooltiptext tooltiptext3"></span></div>
+        <div class="bar bar4" onmouseover="showDescription(4)" onmouseout="hideDescription(4)" onclick="art(4)"><span class="tooltiptext tooltiptext4"></span></div>
+        <div class="bar bar5" onmouseover="showDescription(5)" onmouseout="hideDescription(5)" onclick="art(5)"><span class="tooltiptext tooltiptext5"></span></div>
+        <div class="bar bar6" onmouseover="showDescription(6)" onmouseout="hideDescription(6)" onclick="art(6)"><span class="tooltiptext tooltiptext6"></span></div>
+        <div class="bar bar7" onmouseover="showDescription(7)" onmouseout="hideDescription(7)" onclick="art(7)"><span class="tooltiptext tooltiptext7"></span></div>
+        <div class="bar bar8" onmouseover="showDescription(8)" onmouseout="hideDescription(8)" onclick="art(8)"><span class="tooltiptext tooltiptext8"></span></div>
+        <div class="bar bar9" onmouseover="showDescription(9)" onmouseout="hideDescription(9)" onclick="art(9)"><span class="tooltiptext tooltiptext9"></span></div>
+        <div class="bar bar10" onmouseover="showDescription(10)" onmouseout="hideDescription(10)" onclick="art(10)"><span class="tooltiptext tooltiptext10"></span></div>
+        <div class="bar bar11" onmouseover="showDescription(11)" onmouseout="hideDescription(11)" onclick="art(11)"><span class="tooltiptext tooltiptext11"></span></div>
+        <div class="bar bar12" onmouseover="showDescription(12)" onmouseout="hideDescription(12)" onclick="art(12)"><span class="tooltiptext tooltiptext12"></span></div>
+        <div class="bar bar13" onmouseover="showDescription(13)" onmouseout="hideDescription(13)" onclick="art(13)"><span class="tooltiptext tooltiptext13"></span></div>
+        <div class="bar bar14" onmouseover="showDescription(14)" onmouseout="hideDescription(14)" onclick="art(14)"><span class="tooltiptext tooltiptext14"></span></div>
+        <div class="bar bar15" onmouseover="showDescription(15)" onmouseout="hideDescription(15)" onclick="art(15)"><span class="tooltiptext tooltiptext15"></span></div>
+        <div class="bar bar16" onmouseover="showDescription(16)" onmouseout="hideDescription(16)" onclick="art(16)"><span class="tooltiptext tooltiptext16"></span></div>
+        <div class="bar bar17" onmouseover="showDescription(17)" onmouseout="hideDescription(17)" onclick="art(17)"><span class="tooltiptext tooltiptext17"></span></div>
+        <div class="bar bar18" onmouseover="showDescription(18)" onmouseout="hideDescription(18)" onclick="art(18)"v><span class="tooltiptext tooltiptext18"></span></div>
+        <div class="bar bar19" onmouseover="showDescription(19)" onmouseout="hideDescription(19)" onclick="art(19)"><span class="tooltiptext tooltiptext19"></span></div>
+        <div class="bar bar20" onmouseover="showDescription(20)" onmouseout="hideDescription(20)" onclick="art(20)"><span class="tooltiptext tooltiptext20"></span></div>
+        <div class="bar bar21" onmouseover="showDescription(21)" onmouseout="hideDescription(21)" onclick="art(21)"><span class="tooltiptext tooltiptext21"></span></div>
+        <div class="bar bar22" onmouseover="showDescription(22)" onmouseout="hideDescription(22)" onclick="art(22)"><span class="tooltiptext tooltiptext22"></span></div>
+        <div class="bar bar23" onmouseover="showDescription(23)" onmouseout="hideDescription(23)" onclick="art(23)"><span class="tooltiptext tooltiptext23"></span></div>
+        <div class="bar bar24" onmouseover="showDescription(24)" onmouseout="hideDescription(24)" onclick="art(24)"><span class="tooltiptext tooltiptext24"></span></div>
+        <div class="bar bar25" onmouseover="showDescription(25)" onmouseout="hideDescription(25)" onclick="art(25)"><span class="tooltiptext tooltiptext25"></span></div>
+        <div class="bar bar26" onmouseover="showDescription(26)" onmouseout="hideDescription(26)" onclick="art(26)"><span class="tooltiptext tooltiptext26"></span></div>
+        <div class="bar bar27" onmouseover="showDescription(27)" onmouseout="hideDescription(27)" onclick="art(27)"><span class="tooltiptext tooltiptext27"></span></div>
+        <div class="bar bar28" onmouseover="showDescription(28)" onmouseout="hideDescription(28)" onclick="art(28)"><span class="tooltiptext tooltiptext28"></span></div>
+        <div class="bar bar29" onmouseover="showDescription(29)" onmouseout="hideDescription(29)" onclick="art(29)"><span class="tooltiptext tooltiptext29"></span></div>
+        <div class="bar bar30" onmouseover="showDescription(30)" onmouseout="hideDescription(30)" onclick="art(30)"><span class="tooltiptext tooltiptext30"></span></div>
+        <div class="bar bar31" onmouseover="showDescription(31)" onmouseout="hideDescription(31)" onclick="art(31)"><span class="tooltiptext tooltiptext31"></span></div>
+        <div class="bar bar32" onmouseover="showDescription(32)" onmouseout="hideDescription(32)" onclick="art(32)"><span class="tooltiptext tooltiptext32"></span></div>
+        <div class="bar bar33" onmouseover="showDescription(33)" onmouseout="hideDescription(33)" onclick="art(33)"><span class="tooltiptext tooltiptext33"></span></div>
+        <div class="bar bar34" onmouseover="showDescription(34)" onmouseout="hideDescription(34)" onclick="art(34)"><span class="tooltiptext tooltiptext34"></span></div>
+        <div class="bar bar35" onmouseover="showDescription(35)" onmouseout="hideDescription(35)" onclick="art(35)"><span class="tooltiptext tooltiptext35"></span></div>
+        <div class="bar bar36" onmouseover="showDescription(36)" onmouseout="hideDescription(36)" onclick="art(36)"><span class="tooltiptext tooltiptext36"></span></div>
+        <div class="bar bar37" onmouseover="showDescription(37)" onmouseout="hideDescription(37)" onclick="art(37)"><span class="tooltiptext tooltiptext37"></span></div>
+        <div class="bar bar38" onmouseover="showDescription(38)" onmouseout="hideDescription(38)" onclick="art(38)"><span class="tooltiptext tooltiptext38"></span></div>
+        <div class="bar bar39" onmouseover="showDescription(39)" onmouseout="hideDescription(39)" onclick="art(39)"><span class="tooltiptext tooltiptext39"></span></div>
+        <div class="bar bar40" onmouseover="showDescription(40)" onmouseout="hideDescription(40)" onclick="art(40)"><span class="tooltiptext tooltiptext40"></span></div>
+        <div class="bar bar41" onmouseover="showDescription(41)" onmouseout="hideDescription(41)" onclick="art(41)"><span class="tooltiptext tooltiptext41"></span></div>
+        <div class="bar bar42" onmouseover="showDescription(42)" onmouseout="hideDescription(42)" onclick="art(42)"><span class="tooltiptext tooltiptext42"></span></div>
+        <div class="bar bar43" onmouseover="showDescription(43)" onmouseout="hideDescription(43)" onclick="art(43)"><span class="tooltiptext tooltiptext43"></span></div>
+        <div class="bar bar44" onmouseover="showDescription(44)" onmouseout="hideDescription(44)" onclick="art(44)"><span class="tooltiptext tooltiptext44"></span></div>
+        <div class="bar bar45" onmouseover="showDescription(45)" onmouseout="hideDescription(45)" onclick="art(45)"><span class="tooltiptext tooltiptext45"></span></div>
+        <div class="bar bar46" onmouseover="showDescription(46)" onmouseout="hideDescription(46)" onclick="art(46)"><span class="tooltiptext tooltiptext46"></span></div>
+        <div class="bar bar47" onmouseover="showDescription(47); leastPlayed()" onmouseout="hideDescription(47); hideLeastPlayed()"  onclick="art(47)"><span class="tooltiptext tooltiptext47"></span></div>
+        <div class="bar bar48" onmouseover="showDescription(48); leastPlayed()" onmouseout="hideDescription(48); hideLeastPlayed()" onclick="art(48)"><span class="tooltiptext tooltiptext48"></span></div>
+        <div class="bar bar49" onmouseover="showDescription(49); leastPlayed()" onmouseout="hideDescription(49); hideLeastPlayed()" onclick="art(49)"><span class="tooltiptext tooltiptext49"></span></div>
+    </div>
+
+
+    <!-- vertical legend next to bars -->
+    <div class="axis"></div>
+
+
+    <!-- track data must come first -->
+    <script class="dataSource" src="track-data-short_term.js"></script>
+    <!-- <script class="dataSource" src="track-data-medium_term.js"></script> -->
+    <!-- <script class="dataSource" src="track-data-long_term.js"></script> -->
+
+    <script src="music-mood.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- TODO -->
+<!-- screenshot image -->
+<!-- embed or set up site -->
+<!-- Issue - audioplay button when zooming out -->
+<!-- could make larger but lose aesthetic appeal -->
+
+

@@ -1,0 +1,418 @@
+/* colors */
+/* green: #30e3ca */
+/* darker green: 229788 */
+/* darkest green:  1a7266*/
+/* navy: #222831 */
+/* white: #ccc */
+/* white brighter: f8f7f7 */
+/* grey: #bbbbbb */
+
+/* https://colorhunt.co/palette/14832 */
+/* https://colorhunt.co/palette/117601 */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: #f8f7f7;
+}
+body {
+    background: #222831;
+}
+
+
+
+.home {
+    top: 20px;
+    right: 55px;
+    width: 55px;
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #ccc;
+    background-image: linear-gradient(#222831,#222831), radial-gradient(circle at top left, #98ebe0, #1a7266);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    text-align: center;
+    cursor: pointer;
+    /* opacity: 80%; */
+}
+
+
+
+.title {
+    color: #ccc;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 60px;
+    line-height: 0.65em;
+    transition: 1s ease-in-out;
+}
+.what {
+    text-indent: 6.9px;
+    line-height: 0.69em;
+}
+.ive {
+    text-indent: 8px;
+}
+.been {
+    text-indent: 4px;
+}
+.to {
+    text-indent: 222px;
+    font-size: 30px;
+    line-height: 0.6em;
+}
+.listeningside {
+    transform: translate(0) rotate(90deg);
+    /* color: greenyellow; */
+    color: #30e3ca;
+    background: transparent;
+    font-size: 130px;
+    position: absolute;
+    top: 150px;
+    left: -200px;
+    /* mix-blend-mode: soft-light; */
+    opacity: 20%;
+    transition: 0.5s ease-in-out;
+    animation: slide 1000ms ease-in-out;
+}
+@keyframes slide {
+    0% {transform:translateY(-100%) rotate(90deg)}
+    100% {transform:translate(0) rotate(90deg)}
+}
+
+
+
+.subheading {
+    /* position: absolute; */
+    position: relative;
+    margin-top: 8px;
+    width: 300px;
+    top: 200px;
+    left: 30px;
+    color: #bbbbbb;
+    /* text-align: justify; */
+    /* mix-blend-mode: exclusion; */
+    /* text-shadow: 0 0 5px #000; */
+}
+.subheadingtext {
+    color: #bbbbbb;
+    transition: 0.2s ease-in-out;
+    line-height: 1.1em;
+}
+
+
+#dropdown {
+    /* border: solid pink; */
+    position: relative;
+    margin-top: 5px;
+    width: 200px;
+
+}
+#dropdown label {
+    display:block;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #f8f7f7;
+    letter-spacing: 0.3em;
+}
+#dropdown select{
+    border: solid #eeeeee;
+    border-radius: 5px;
+    /* width: 200px; */
+    background: #222831;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+#feature-description {
+    /* position: absolute; */
+    position: relative;
+    /* left: 30px; */
+    /* bottom: 120px; */
+    /* top: 395px; */
+    margin-top: 15px;
+    font-weight: normal;
+    color: #30e3ca;
+    cursor: default;
+    opacity: 0;
+    transition: 0.1s ease-in-out;
+    /* border: solid green; */
+    width: 300px;
+    text-shadow: 0 0 5px #30e3ca;
+}
+
+
+
+
+/* values hovering over bars */
+.tooltiptext {
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    /* left: 50%; */
+    visibility: hidden;
+    background: #11999e;
+    color:#000;
+    border-radius: 10px;
+    padding: 5px 5px;
+    /* this might be weire w text of diff sizes */
+    margin-left: -25px;
+    text-align: center;
+    /* opacity: 100%; */
+}
+.bar:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* labels under bars */
+.most-played, .least-played {
+    position: absolute;
+    bottom: 5px;
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5em;
+    opacity: 0;
+    /* HERE this causes images to flash */
+    transition: 0.1s ease-in;
+}
+.most-played {
+    right: 50%;
+}
+.least-played {
+    right: 5%;
+}
+
+
+/* contains bars */
+.data-container {
+    position: absolute;
+    /* justify-content: space-evenly; */
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    width: 50%;
+    /* height: 400px; */
+    height: 25vw;
+    /* right: 80px; */
+    right: 5%;
+    bottom: 30px;
+}
+
+
+
+
+.bar {
+    position: relative;
+    background: #30e3ca;
+    background: linear-gradient(45deg, #229788, #30e3ca);
+    width: 100%;
+    height: 90%;
+    border-radius: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    /* margin: 10px 10px; */
+    /* margin: 0.1em; */
+    /* margin-bottom: 10px; */
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* individual bars edited in js file */
+
+/* ruler on side of bars */
+.axis {
+    position: absolute;
+    width: 10px;
+    height: 25vw;
+    right: 2%;
+    bottom: 30px;
+    /* border: solid hotpink; */
+    background: #eeeeee;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+
+
+
+
+/* to left of all bars */
+#description {    
+    opacity: 0;
+    text-align: right; 
+    font-size: 1.3em;   
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+
+    position: absolute;
+    bottom: 0;
+    left: -82%;
+    width: 80%;
+}
+.name {
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 0.7em;
+    cursor: default;
+    text-shadow: 0 0 3px #30e3ca;
+}
+.artist {
+    font-style: oblique;
+    font-size: 2em;
+    line-height: 1.2em;
+    cursor: default;
+}
+
+
+/* cover art */
+.art, .loading {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* width: 524px; */
+    width: 100%;
+    /* bottom: 0px; */
+    /* mix-blend-mode:hard-light; */
+    mix-blend-mode: difference;
+    z-index: 1;
+    opacity: 0;
+    /* allows to click underneath image, not supported by IE10 */
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.loading {
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .2), transparent);
+}
+
+/* dots displayed when image's loading */
+.loading-text {
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+    z-index: 5;
+    /* opacity: 0; */
+    visibility: hidden;
+    font-size: 60px;
+    color: #229788;
+    transition: 0.1 ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: pulse 3s infinite;
+}
+@keyframes pulse {
+    0% {
+      opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+
+  
+/* play audio button */
+#audio {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: -60%;
+    left: -50px;
+    z-index: 2;
+
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+
+    /* right: 600px;
+    top: 40px; */
+    width: 100px;
+    height: 40px;
+    /* width: 150px; */
+    /* font-size: 40em; */
+    display: block;
+    mix-blend-mode: difference;
+    transition: 0.3s ease-in-out;
+    /* mix-blend-mode: soft-light; */
+    /* mix-blend-mode: luminosity; */
+    /* transform: scale(0.7); */
+    /* transform: rotate(-90deg); */
+    transform: scale(0);
+    animation: hide 1000ms ease-in-out;
+}
+#audio:focus {
+    outline: 0;
+}
+@keyframes hide {
+    /* doesnt really help */
+    0% {transform:translateY(+100%) scale(0)}
+    100% {transform:translate(0) scale(0)}
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .data-container {
+        /* display: flex;
+        align-content: center;
+        align-items: flex-end; */
+        width: 90%;
+        bottom: 15px;
+    }
+    .axis {
+        visibility: hidden;
+    }
+    #description {
+        visibility: hidden;
+    }
+    .most-played, .least-played {
+        visibility: hidden;
+    }
+    #feature-description {
+        width: 100%;
+        text-align: justify;
+    }
+    #audio {
+        top: -300%;
+        left: 75%;
+    }
+    .listeningside {
+        color: #145a51;
+    }
+}
+@media screen and (max-width: 800px) and (min-width: 600px) {
+    /* #audio {
+        top: -300%;
+        left: 75%;
+    } */
+    #audio {
+        left: 75%;
+        top: -127%;
+    }
+}
+
+
