@@ -343,6 +343,8 @@ from, to { border-color: transparent }
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
+        padding-left: 0;
+        
     }
 }
 

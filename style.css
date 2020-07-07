@@ -363,6 +363,7 @@ body {
     }
     .resumeEmailText { 
         visibility: hidden;
+        opacity: 0;
         /* top: 14.9%; */
         /* font-size: 2vw; */
 
