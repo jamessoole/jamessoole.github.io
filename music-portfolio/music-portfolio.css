@@ -311,9 +311,7 @@ from, to { border-color: transparent }
 }
 .column img {
     margin-top: 5px;
-    background-image: linear-gradient(to bottom right, transparent, rgb(196, 196, 196));
-    background-image: linear-gradient(to bottom right, transparent 0%, rgb(196, 196, 196) 25%, transparent 50%, rgb(196, 196, 196) 75%);
-
+    background-image: linear-gradient(to bottom right, transparent 0% , rgb(196, 196, 196) 80%);
     /* background-size: 100%; */
     /* animation: skeleton 5s ease; */
 }
