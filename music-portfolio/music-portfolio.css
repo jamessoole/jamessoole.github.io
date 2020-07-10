@@ -180,7 +180,7 @@ from, to { border-color: transparent }
     top:-762px;
     /* position: relative; */
     background-color: #212027;
-    background-image: url(images/earthgang.jpg);
+    background-image: url(images/earthgang-min.jpg);
     height: 130%;
     /* width: 100%; */
 
@@ -312,6 +312,8 @@ from, to { border-color: transparent }
 .column img {
     margin-top: 5px;
     background-image: linear-gradient(to bottom right, transparent, rgb(196, 196, 196));
+    background-image: linear-gradient(to bottom right, transparent 0%, rgb(196, 196, 196) 25%, transparent 50%, rgb(196, 196, 196) 75%);
+
     /* background-size: 100%; */
     /* animation: skeleton 5s ease; */
 }
