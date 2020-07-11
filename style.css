@@ -312,7 +312,7 @@ body {
     position: relative;
     margin-top: 20px;
     display: flex;
-    /* for safari bug */
+    /* for safari bug to prevent img stretching */
     align-items: flex-start; /* new */
     
     width: 600px;
