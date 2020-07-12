@@ -1,3 +1,7 @@
+<!-- TODO when adding a project -->
+<!-- add the preview image id to the list in the media query -->
+<!-- add event listener in main.js for picture onclick -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +37,6 @@
             <img src="images/music1.JPG" id="music-happiness-index" class="preview-image preview-image-wide preview-image-left">
             <!-- <img src="images/music1.jpg" id="music-happiness-index" class="preview-image"> -->
 
-
             <div class="project-text project-text-right">
                 <div class="project-title left">Music Happiness Index</div>
                 <div class="project-description left">Visualize values on the 'Happiness Scale' for my most-played songs based on audio features pulled from Spotify API. Display song features including energy, valence, mode (major/minor key), danceability, tempo, and a self-made aggregate total.</div>
@@ -45,6 +48,7 @@
             </div>
 
         </div>
+
 
         <!-- CHAT APP -->
         <div class="box">
@@ -64,6 +68,7 @@
             
         </div>
 
+
         <!-- DUG -->
         <div class="box">
             <img src="images/dug1.png" id="dug" class="preview-image preview-image-wide preview-image-left">
@@ -74,7 +79,7 @@
                 <div class="project-description left">Project Dug is an exploratory effort to extract actionable signal from a custom electroencephalogram (EEG) cap being built for a dog named Alma. One validates whether the captured signal is actionable by classifying whether Alma sees a treat ("Squirrel!") just using her neural response!</div>
                 <!-- <div class="tools">Python, Arduino, Pi </div> -->
                 <div class="btn-link btns-left">
-                    <li><a id="dugSite" href="https://www.news-gazette.com/news/ui-students-unveil-dog-human-translator-at-engineering-open-house/article_6bd4e743-3316-5138-b73f-180fba226aff.html" target="_blank">Press</a></li>
+                    <li><a id="dugSite" href="https://grainger.illinois.edu/news/30495" target="_blank">Press</a></li>
                     <li><a id="dugCode" href="https://github.com/jamessoole/Dug" target="_blank">Code</a></li>
                 </div>
                 
@@ -102,25 +107,38 @@
         </div>
 
 
-        <!-- Music Photography Portfolio -->
+        <!-- PIERCE 2019 -->
         <div class="box">
-            <img src="images/music-portfolio1.JPG" id="music-portfolio" class="preview-image preview-image-wide preview-image-left">
-            <!-- <img src="images/music-portfolio4.JPG" class="preview-image"> -->
-            
+            <img src="images/pierce1.JPG" id="pierce1" style="mix-blend-mode: soft-light;" class="preview-image preview-image-wide preview-image-left">
+            <!-- <img src="images/pierce1.jpg" class="preview-image preview-image-wide"> -->
+
             <div class="project-text project-text-right">
-                <div class="project-title left">Photography Portfolio</div>
-                <div class="project-description left">A collection of my work photographing live musicians. Captured for event-organizers and magazines in Champaign-Urbana and New York City. </div>
+                <div class="project-title left">Nanoparticle Imaging Research</div>
+                <div class="project-description left">Summer 2019 research engineering a surgical guidance apparatus to aide in tumor resection. Examined rare earth nanoparticles as infrared contrast agents in tissue imaging, building a projector-based system to image-process, determine particle locations, and project locations for surgical guidance.</div>
+                <!-- <div class="tools">SolidWorks, LabView </div> -->
                 <div class="btn-link btns-left">
-                    <li><a id="photoSite" href="music-portfolio/music-portfolio.html">Site</a></li>
-                    <li><a id="photoCode"href="https://github.com/jamessoole/Website" target="_blank">Code</a></li>
+                    <!-- update external link -->
+                    <li><a id="pierce1Abstract" href="images/abstractSu2019.pdf" target="_blank">Abstract</a></li>
+                    <li><a id="pierce1Code" href="/" onclick="return false;" style=" cursor:no-drop;">Code</a></li>
                 </div>
-                
             </div>
         </div>
 
-        
-        <!-- <div class="box"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, rerum! Maiores amet velit, debitis quam sequi magni, cupiditate odit aliquam reprehenderit, ipsam dignissimos dolor asperiores repudiandae? Vitae, suscipit in quisquam possimus facilis dolor iusto eveniet consequuntur voluptas, voluptatem libero commodi reprehenderit praesentium ipsam iste ratione delectus perferendis quidem tempore nihil.</p></div>
-        <div class="box"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, rerum! Maiores amet velit, debitis quam sequi magni, cupiditate odit aliquam reprehenderit, ipsam dignissimos dolor asperiores repudiandae? Vitae, suscipit in quisquam possimus facilis dolor iusto eveniet consequuntur voluptas, voluptatem libero commodi reprehenderit praesentium ipsam iste ratione delectus perferendis quidem tempore nihil.</p></div> -->
+
+        <!-- MUSIC PHOTOGRAPHY PORTFOLIO -->
+        <div class="box">
+            <img src="images/music-portfolio1.JPG" id="music-portfolio" class="preview-image preview-image-wide preview-image-right">
+            <!-- <img src="images/music-portfolio4.JPG" class="preview-image"> -->
+            
+            <div class="project-text project-text-left">
+                <div class="project-title right">Photography Portfolio</div>
+                <div class="project-description right">A collection of my work photographing live musicians. Captured for event-organizers and magazines in Champaign-Urbana and New York City. </div>
+                <div class="btn-link btns-right">
+                    <li><a id="photoSite" href="music-portfolio/music-portfolio.html">Site</a></li>
+                    <li><a id="photoCode"href="https://github.com/jamessoole/Website" target="_blank">Code</a></li>
+                </div>
+            </div>
+        </div>
 
 
     </div>
@@ -141,6 +159,4 @@
 
 
 <!-- TODO -->
-
 <!-- deploy chatapp (and revert to working/clean version) -->
-<!-- gitignore for most website files -->

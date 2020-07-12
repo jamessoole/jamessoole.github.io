@@ -30,7 +30,9 @@ const  musicHappiness = document.querySelector("#music-happiness-index");
 const  liveChat = document.querySelector("#live-chat-app");
 const  dug = document.querySelector("#dug");
 const  boxes = document.querySelector("#boxes");
+const  pierce1 = document.querySelector("#pierce1");
 const  musicPortfolio = document.querySelector("#music-portfolio");
+
 
 
 musicHappiness.addEventListener("click", (e) => {
@@ -47,4 +49,7 @@ boxes.addEventListener("click", (e) => {
 });
 musicPortfolio.addEventListener("click", (e) => {
     document.querySelector("#photoSite").click();
+});
+pierce1.addEventListener("click", (e) => {
+    document.querySelector("#pierce1Abstract").click();
 });
