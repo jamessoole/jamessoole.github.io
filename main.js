@@ -32,6 +32,9 @@ const  dug = document.querySelector("#dug");
 const  boxes = document.querySelector("#boxes");
 const  pierce1 = document.querySelector("#pierce1");
 const  musicPortfolio = document.querySelector("#music-portfolio");
+const  starcourse = document.querySelector("#starcourse");
+const  pierce2 = document.querySelector("#pierce2");
+
 
 
 
@@ -52,4 +55,10 @@ musicPortfolio.addEventListener("click", (e) => {
 });
 pierce1.addEventListener("click", (e) => {
     document.querySelector("#pierce1Abstract").click();
+});
+starcourse.addEventListener("click", (e) => {
+    document.querySelector("#starcourseSite").click();
+});
+pierce2.addEventListener("click", (e) => {
+    document.querySelector("#pierce2Abstract").click();
 });
