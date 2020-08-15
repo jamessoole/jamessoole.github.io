@@ -156,7 +156,7 @@ body {
     .box {
         flex-direction: column;
     }
-    #music-happiness-index, #live-chat-app, #dug, #boxes, #music-portfolio, #pierce1, #pierce2, #star-course {
+    #music-happiness-index, #live-chat-app, #dug, #boxes, #music-portfolio, #pierce1, #pierce2, #starcourse {
         border-radius: 5px;
         width: 95%;
     }
